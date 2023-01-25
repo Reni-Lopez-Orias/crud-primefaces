@@ -13,11 +13,12 @@
     [showCurrentPageReport]="true"
 >
 <ng-template pTemplate="caption">
-    <div class="container-header-table " style="width: 100%;">
-        <!-- <h1 class="m-0">Manage Users</h1> -->
+    <div class="container-header-table " style="display: flex;flex-wrap: wrap;">
+        <h1 class="m-0">Manage Users</h1>
         <span class="p-input-icon-left">
             <i class="pi pi-search"></i>
             <input 
+            style="min-width: 16.5rem;"
             pInputText 
             type="text" 
             (input)="dt.filterGlobal($any($event.target).value, 'contains')" 
