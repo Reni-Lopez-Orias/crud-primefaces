@@ -1,0 +1,5 @@
+<div>
+    <label class="error-label" *ngIf="this.control?.requiredInput">{{this.control?.requiredInput}}</label>
+    <label class="error-label" *ngIf="this.control?.minLength && !this.control?.requiredInput">{{this.control?.minLength }}</label>
+    <label class="error-label" *ngIf="this.control?.email && !this.control?.requiredInput">{{this.control?.email }}</label>
+</div>

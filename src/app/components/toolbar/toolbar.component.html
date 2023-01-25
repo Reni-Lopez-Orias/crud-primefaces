@@ -1,0 +1,20 @@
+<p-toolbar styleClass="mb-4 ">
+  <ng-template pTemplate="left">
+    <button
+      pButton
+      pRipple
+      label="New"
+      icon="pi pi-plus"
+      class="p-button-success button-open-dialog"
+      (click)="openDialog()"
+    ></button>
+    <button
+      pButton
+      pRipple
+      icon="pi pi-trash"
+      class="p-button-danger" 
+      [disabled]="!userSelected"
+      (click)="confirmDelete($event)"
+    ></button>
+  </ng-template>
+</p-toolbar>  

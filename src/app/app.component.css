@@ -1,0 +1,19 @@
+:host ::ng-deep .p-dialog .product-image {
+    width: 150px;
+    margin: 0 auto 2rem auto;
+    display: block;
+}
+
+textarea { resize:none; } 
+
+
+:host ::ng-deep .p-message-custom {
+    background-color: #E1CFE7;
+    border: solid #8A427A;
+    border-width: 0 0 0 6px;
+    color: #2c1e30;
+}
+
+.container-layout{
+    margin: 2rem;
+}

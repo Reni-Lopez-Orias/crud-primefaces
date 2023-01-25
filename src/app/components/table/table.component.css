@@ -1,0 +1,37 @@
+.container-header-table{
+    display: flex;
+    justify-content: space-between; 
+    align-items: baseline;
+}
+
+.td-actions{
+    display: flex;
+}
+
+.button-update{
+    margin-right: 0.5rem;
+}
+
+p-table{
+    min-width: 75rem;
+}
+
+.td-header-checkbox{
+    width: 4rem;
+}
+
+.td-email{
+    min-width:10rem
+}
+
+.td-age{
+    min-width:10rem
+}
+
+.td-gender{
+    min-width:10rem
+}
+
+.td-user-name{
+    min-width:10rem
+}

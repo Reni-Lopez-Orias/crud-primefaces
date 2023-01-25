@@ -1,0 +1,28 @@
+.margin-input {
+    margin-top: 1.5rem;
+}
+
+.margin-botton-error-label {
+    margin-bottom: 1rem;
+}
+
+.container-button-form {
+    display: flex;
+    align-items: baseline;
+    justify-content: right;
+    margin-top: 1.5rem;
+}
+
+.button-cancel-form {
+    max-width: 7rem;
+}
+
+.button-save-form {
+    max-width: 7rem;
+    margin-left: 1rem
+}
+
+.container-slider {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}

@@ -1,0 +1,121 @@
+<p-dialog
+  [(visible)]="dialog"
+  [style]="{ width: '500px' }"
+  header="User Details"
+  [modal]="true"
+  styleClass="p-fluid"
+>
+  <form autocomplete="off" [formGroup]="userForm" (ngSubmit)="submitForm()">
+    
+    <div class="margin-input" *ngIf="userForm.get('uid')?.value">
+      <span class="p-float-label">
+        <input
+          [disabled]="true"
+          readonly
+          id="float-input"
+          type="text"
+          pInputText
+          formControlName="uid"
+        />
+        <label for="float-input">UID</label>
+      </span>
+    </div>
+
+    <div class="margin-input">
+      <span class="p-float-label">
+        <input
+          id="float-input"
+          type="text"
+          pInputText
+          formControlName="userName"
+        />
+        <label for="float-input">User Name</label>
+      </span>
+      <app-label-error class="margin-botton-error-label" [control]="userForm.get('userName')?.errors"></app-label-error>
+    </div>
+
+    <div class="margin-input">
+      <span class="p-float-label">
+        <input
+          id="float-input"
+          type="text"
+          pInputText
+          formControlName="firstName"
+        />
+        <label for="float-input">First Name</label>
+      </span>
+      <app-label-error class="margin-botton-error-label" [control]="userForm.get('firstName')?.errors"></app-label-error>
+    </div>
+
+    <div class="margin-input">
+      <span class="p-float-label">
+        <input
+          id="float-input"
+          type="text"
+          pInputText
+          formControlName="lastName"
+        />
+        <label for="float-input">Last Name</label>
+      </span>
+      <app-label-error class="margin-botton-error-label" [control]="userForm.get('lastName')?.errors"></app-label-error>
+    </div>
+
+    <div class="margin-input">
+      <span class="p-float-label">
+        <input
+          id="float-input"
+          type="email"
+          pInputText
+          formControlName="email"
+        />
+        <label for="float-input">Email</label>
+      </span>
+      <app-label-error class="margin-botton-error-label" [control]="userForm.get('email')?.errors"></app-label-error>
+    </div>
+
+    <div class="margin-input">
+      <p-dropdown
+        placeholder="Select Gender"
+        optionValue="code"
+        formControlName="gender"
+        appendTo="body"
+        [options]="gender"
+        optionLabel="name"
+      ></p-dropdown>
+      <app-label-error class="margin-botton-error-label" [control]="userForm.get('gender')?.errors"></app-label-error>
+    </div>
+
+    <div class="margin-input">
+      <div class="margin-botton-error-label">
+        <span>Age: <strong>{{ userForm.get("age")?.value }}</strong></span>
+      </div>
+      <div class="container-slider" >
+        <p-slider formControlName="age"></p-slider>
+        <app-label-error class="margin-botton-error-label" [control]="userForm.get('age')?.errors"></app-label-error>
+      </div>
+    </div>
+
+    <br />
+
+    <div class="container-button-form">
+      <button
+        (click)="hideDialog()" 
+        pButton
+        pRipple
+        label="Cancel"
+        icon="pi pi-times"
+        class="p-button-warning button-cancel-form"
+      ></button>
+      <button
+        (keyup.enter)="submitForm()"
+        [disabled]="userForm.invalid" 
+        pButton
+        label="Save"
+        type="submit"
+        icon="pi pi-check"
+        class="p-button-success button-save-form"
+      ></button>
+    </div>
+
+  </form>
+</p-dialog>
